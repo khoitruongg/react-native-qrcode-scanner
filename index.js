@@ -302,7 +302,9 @@ export default class QRCodeScanner extends Component {
     if (!this.state.isCameraActivated) {
       return (
         <TouchableWithoutFeedback onPress={() => this._setCamera(true)}>
-          {cameraTimeoutView}
+          <View>
+            {cameraTimeoutView}
+          </View>
         </TouchableWithoutFeedback>
       );
     }
